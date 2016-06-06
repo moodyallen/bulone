@@ -5,18 +5,17 @@ Bulone
 
 Bulone can take you from this:
 
-![bulone](https://cloud.githubusercontent.com/assets/1458767/15832721/932f97e4-2c34-11e6-9136-d9e53719d618.png =400x456)
-
+![alt tag](https://cloud.githubusercontent.com/assets/1458767/15833498/274d7a9c-2c38-11e6-9647-5db71d91a454.png) 
 
 to this:
 
-![structure](https://cloud.githubusercontent.com/assets/1458767/15832722/95beb40e-2c34-11e6-94c5-573b6fee4b56.png =600x395)
+![structure](https://cloud.githubusercontent.com/assets/1458767/15833500/278b0790-2c38-11e6-9600-d5e30af13083.png)
 
 in less then a second
 
 ###Have fun!
 
-![icon](https://cloud.githubusercontent.com/assets/1458767/15832717/903bdcb4-2c34-11e6-8cca-f6001cec739c.png =60x60 "Bulone")
+![icon](https://cloud.githubusercontent.com/assets/1458767/15833499/277ff346-2c38-11e6-9221-c19e14e4a305.png)
 ######[Download the latest release](https://github.com/moodyallen/bulone/releases/latest)
 
 ____________
