@@ -1,0 +1,26 @@
+import UIKit
+
+class {{ module }}View: UIViewController {
+
+    var presenter: {{ module }}PresenterProtocol?
+
+    override func viewDidLoad() {
+        setup()
+        presenter?.viewDidLoad()
+    }
+
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        layout()
+    }
+
+}
+
+extension {{ module }}View: {{ module }}ViewProtocol {
+    func updateView(model: {{ module }}Item) { }
+}
+
+private extension {{ module }}View {
+    func setup() { }
+    func layout() { }
+}

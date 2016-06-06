@@ -1,0 +1,78 @@
+import UIKit
+
+protocol {{ module }}ViewProtocol: class {
+
+    var presenter: {{ module }}PresenterProtocol? { get set }
+
+    /**
+    * Add here your methods for communication PRESENTER -> VIEW
+    */
+
+    func updateView(model: {{ module }}Item)
+
+}
+
+protocol {{ module }}WireFrameProtocol: class {
+
+    static func present{{ module }}Module(inWindow window: UIWindow)
+    static func push{{ module }}Module(toNavigationController nvc: UINavigationController, animated: Bool)
+
+    /**
+    * Add here your methods for communication PRESENTER -> WIREFRAME
+    */
+
+
+}
+
+protocol {{ module }}PresenterProtocol: class {
+
+    var view: {{ module }}ViewProtocol? { get set }
+    var interactor: {{ module }}InteractorInputProtocol? { get set }
+    var wireFrame: {{ module }}WireFrameProtocol? { get set }
+
+    /**
+    * Add here your methods for communication VIEW -> PRESENTER
+    */
+
+    func viewDidLoad()
+
+}
+
+protocol {{ module }}InteractorOutputProtocol: class {
+
+    /**
+    * Add here your methods for communication INTERACTOR -> PRESENTER
+    */
+
+    func dataReady(model: {{ module }}Item)
+
+}
+
+protocol {{ module }}InteractorInputProtocol: class {
+
+    var presenter: {{ module }}InteractorOutputProtocol? { get set }
+    var APIDataManager: {{ module }}APIDataManagerInputProtocol? { get set }
+    var localDatamanager: {{ module }}LocalDataManagerInputProtocol? { get set }
+
+    /**
+    * Add here your methods for communication PRESENTER -> INTERACTOR
+    */
+
+
+}
+
+protocol {{ module }}APIDataManagerInputProtocol: class {
+
+    /**
+    * Add here your methods for communication INTERACTOR -> APIDATAMANAGER
+    */
+
+}
+
+protocol {{ module }}LocalDataManagerInputProtocol: class {
+
+    /**
+    * Add here your methods for communication INTERACTOR -> LOCALDATAMANAGER
+    */
+
+}

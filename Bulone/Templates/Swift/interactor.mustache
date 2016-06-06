@@ -1,0 +1,11 @@
+import Foundation
+
+class {{ module }}Interactor: {{ module }}InteractorInputProtocol {
+
+    weak var presenter: {{ module }}InteractorOutputProtocol?
+    var APIDataManager: {{ module }}APIDataManagerInputProtocol?
+    var localDatamanager: {{ module }}LocalDataManagerInputProtocol?
+
+    init() {}
+
+}

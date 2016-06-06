@@ -1,0 +1,42 @@
+import UIKit
+
+class {{ module }}WireFrame: {{ module }}WireFrameProtocol {
+  
+    class func present{{ module }}Module(inWindow window: UIWindow) {
+        let view = assemble()
+        window.rootViewController = view
+    }
+
+    class func push{{ module }}Module(toNavigationController nvc: UINavigationController, animated: Bool) {
+        let view = assemble()
+        nvc.pushViewController(view, animated: animated)
+    }
+
+}
+
+private extension {{ module }}WireFrame {
+
+    private class func assemble() -> {{ module }}View {
+
+        // Generating module components
+        let view: {{ module }}ViewProtocol = {{ module }}View()
+        let presenter: protocol<{{ module }}PresenterProtocol, {{ module }}InteractorOutputProtocol> = {{ module }}Presenter()
+        let interactor: {{ module }}InteractorInputProtocol = {{ module }}Interactor()
+        let APIDataManager: {{ module }}APIDataManagerInputProtocol = {{ module }}APIDataManager()
+        let localDataManager: {{ module }}LocalDataManagerInputProtocol = {{ module }}LocalDataManager()
+        let wireFrame: {{ module }}WireFrameProtocol = {{ module }}WireFrame()
+
+        // Connecting
+        view.presenter = presenter
+        presenter.view = view
+        presenter.wireFrame = wireFrame
+        presenter.interactor = interactor
+        interactor.presenter = presenter
+        interactor.APIDataManager = APIDataManager
+        interactor.localDatamanager = localDataManager
+
+        return view as! {{ module }}View
+
+    }
+
+}

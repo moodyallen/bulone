@@ -1,0 +1,23 @@
+import Foundation
+
+class {{ module }}Presenter: {{ module }}PresenterProtocol {
+
+    weak var view: {{ module }}ViewProtocol?
+    var interactor: {{ module }}InteractorInputProtocol?
+    var wireFrame: {{ module }}WireFrameProtocol?
+
+    init() {}
+
+}
+
+extension {{ module }}Presenter: {{ module }}InteractorOutputProtocol {
+
+    func viewDidLoad() {
+
+    }
+
+    func dataReady(model: {{ module }}Item) {
+        view?.updateView(model)
+    }
+
+}

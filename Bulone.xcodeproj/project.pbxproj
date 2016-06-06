@@ -1,0 +1,640 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		35DA36290EC61626181416DA /* Pods_Bulone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A76C5872EF8AC4E815342A19 /* Pods_Bulone.framework */; };
+		82952A711D055F13005DCFB0 /* Bulone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82952A701D055F13005DCFB0 /* Bulone.swift */; };
+		82BA9C011C85B31E00964980 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82BA9C001C85B31E00964980 /* AppDelegate.swift */; };
+		82BA9C031C85B31E00964980 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82BA9C021C85B31E00964980 /* ViewController.swift */; };
+		82BA9C051C85B31E00964980 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82BA9C041C85B31E00964980 /* Assets.xcassets */; };
+		82BA9C081C85B31E00964980 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82BA9C061C85B31E00964980 /* Main.storyboard */; };
+		82BA9C131C85B31E00964980 /* BuloneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82BA9C121C85B31E00964980 /* BuloneTests.swift */; };
+		82BA9C1E1C85B31E00964980 /* BuloneUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82BA9C1D1C85B31E00964980 /* BuloneUITests.swift */; };
+		82BA9C3B1C8948FD00964980 /* apidatamanager.mustache in Resources */ = {isa = PBXBuildFile; fileRef = 82BA9C321C8948FD00964980 /* apidatamanager.mustache */; };
+		82BA9C3C1C8948FD00964980 /* header.mustache in Resources */ = {isa = PBXBuildFile; fileRef = 82BA9C331C8948FD00964980 /* header.mustache */; };
+		82BA9C3D1C8948FD00964980 /* interactor.mustache in Resources */ = {isa = PBXBuildFile; fileRef = 82BA9C341C8948FD00964980 /* interactor.mustache */; };
+		82BA9C3E1C8948FD00964980 /* localdatamanager.mustache in Resources */ = {isa = PBXBuildFile; fileRef = 82BA9C351C8948FD00964980 /* localdatamanager.mustache */; };
+		82BA9C3F1C8948FD00964980 /* item.mustache in Resources */ = {isa = PBXBuildFile; fileRef = 82BA9C361C8948FD00964980 /* item.mustache */; };
+		82BA9C401C8948FD00964980 /* presenter.mustache in Resources */ = {isa = PBXBuildFile; fileRef = 82BA9C371C8948FD00964980 /* presenter.mustache */; };
+		82BA9C411C8948FD00964980 /* protocols.mustache in Resources */ = {isa = PBXBuildFile; fileRef = 82BA9C381C8948FD00964980 /* protocols.mustache */; };
+		82BA9C421C8948FD00964980 /* view.mustache in Resources */ = {isa = PBXBuildFile; fileRef = 82BA9C391C8948FD00964980 /* view.mustache */; };
+		82BA9C431C8948FD00964980 /* wireframe.mustache in Resources */ = {isa = PBXBuildFile; fileRef = 82BA9C3A1C8948FD00964980 /* wireframe.mustache */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		82BA9C0F1C85B31E00964980 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 82BA9BF51C85B31E00964980 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 82BA9BFC1C85B31E00964980;
+			remoteInfo = Bulone;
+		};
+		82BA9C1A1C85B31E00964980 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 82BA9BF51C85B31E00964980 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 82BA9BFC1C85B31E00964980;
+			remoteInfo = Bulone;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		66B27BB16997797CCDA8EF3F /* Pods-Bulone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bulone.release.xcconfig"; path = "Pods/Target Support Files/Pods-Bulone/Pods-Bulone.release.xcconfig"; sourceTree = "<group>"; };
+		82952A701D055F13005DCFB0 /* Bulone.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Bulone.swift; path = Bulone/Bulone.swift; sourceTree = "<group>"; };
+		82BA9BFD1C85B31E00964980 /* Bulone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bulone.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		82BA9C001C85B31E00964980 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		82BA9C021C85B31E00964980 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		82BA9C041C85B31E00964980 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		82BA9C071C85B31E00964980 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		82BA9C091C85B31E00964980 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		82BA9C0E1C85B31E00964980 /* BuloneTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BuloneTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		82BA9C121C85B31E00964980 /* BuloneTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuloneTests.swift; sourceTree = "<group>"; };
+		82BA9C141C85B31E00964980 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		82BA9C191C85B31E00964980 /* BuloneUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BuloneUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		82BA9C1D1C85B31E00964980 /* BuloneUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuloneUITests.swift; sourceTree = "<group>"; };
+		82BA9C1F1C85B31E00964980 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		82BA9C321C8948FD00964980 /* apidatamanager.mustache */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = apidatamanager.mustache; path = Templates/Swift/apidatamanager.mustache; sourceTree = "<group>"; };
+		82BA9C331C8948FD00964980 /* header.mustache */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = header.mustache; path = Templates/Swift/header.mustache; sourceTree = "<group>"; };
+		82BA9C341C8948FD00964980 /* interactor.mustache */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = interactor.mustache; path = Templates/Swift/interactor.mustache; sourceTree = "<group>"; };
+		82BA9C351C8948FD00964980 /* localdatamanager.mustache */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = localdatamanager.mustache; path = Templates/Swift/localdatamanager.mustache; sourceTree = "<group>"; };
+		82BA9C361C8948FD00964980 /* item.mustache */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = item.mustache; path = Templates/Swift/item.mustache; sourceTree = "<group>"; };
+		82BA9C371C8948FD00964980 /* presenter.mustache */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = presenter.mustache; path = Templates/Swift/presenter.mustache; sourceTree = "<group>"; };
+		82BA9C381C8948FD00964980 /* protocols.mustache */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = protocols.mustache; path = Templates/Swift/protocols.mustache; sourceTree = "<group>"; };
+		82BA9C391C8948FD00964980 /* view.mustache */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = view.mustache; path = Templates/Swift/view.mustache; sourceTree = "<group>"; };
+		82BA9C3A1C8948FD00964980 /* wireframe.mustache */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = wireframe.mustache; path = Templates/Swift/wireframe.mustache; sourceTree = "<group>"; };
+		84AC8CB821670742386B829D /* Pods-Bulone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bulone.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bulone/Pods-Bulone.debug.xcconfig"; sourceTree = "<group>"; };
+		A76C5872EF8AC4E815342A19 /* Pods_Bulone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bulone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		82BA9BFA1C85B31E00964980 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				35DA36290EC61626181416DA /* Pods_Bulone.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		82BA9C0B1C85B31E00964980 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		82BA9C161C85B31E00964980 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2E2FB7C25DC81ABC31E65ED1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				84AC8CB821670742386B829D /* Pods-Bulone.debug.xcconfig */,
+				66B27BB16997797CCDA8EF3F /* Pods-Bulone.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		82952A721D057E1F005DCFB0 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				82952A701D055F13005DCFB0 /* Bulone.swift */,
+				82BA9C2B1C85E37000964980 /* Templates */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		82BA9BF41C85B31E00964980 = {
+			isa = PBXGroup;
+			children = (
+				82BA9BFF1C85B31E00964980 /* Bulone */,
+				82BA9C111C85B31E00964980 /* BuloneTests */,
+				82BA9C1C1C85B31E00964980 /* BuloneUITests */,
+				82BA9BFE1C85B31E00964980 /* Products */,
+				2E2FB7C25DC81ABC31E65ED1 /* Pods */,
+				E6A25A72EDA7729B5F8D0F97 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		82BA9BFE1C85B31E00964980 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				82BA9BFD1C85B31E00964980 /* Bulone.app */,
+				82BA9C0E1C85B31E00964980 /* BuloneTests.xctest */,
+				82BA9C191C85B31E00964980 /* BuloneUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		82BA9BFF1C85B31E00964980 /* Bulone */ = {
+			isa = PBXGroup;
+			children = (
+				82952A721D057E1F005DCFB0 /* Source */,
+				82BA9C001C85B31E00964980 /* AppDelegate.swift */,
+				82BA9C021C85B31E00964980 /* ViewController.swift */,
+				82BA9C041C85B31E00964980 /* Assets.xcassets */,
+				82BA9C061C85B31E00964980 /* Main.storyboard */,
+				82BA9C091C85B31E00964980 /* Info.plist */,
+			);
+			path = Bulone;
+			sourceTree = "<group>";
+		};
+		82BA9C111C85B31E00964980 /* BuloneTests */ = {
+			isa = PBXGroup;
+			children = (
+				82BA9C121C85B31E00964980 /* BuloneTests.swift */,
+				82BA9C141C85B31E00964980 /* Info.plist */,
+			);
+			path = BuloneTests;
+			sourceTree = "<group>";
+		};
+		82BA9C1C1C85B31E00964980 /* BuloneUITests */ = {
+			isa = PBXGroup;
+			children = (
+				82BA9C1D1C85B31E00964980 /* BuloneUITests.swift */,
+				82BA9C1F1C85B31E00964980 /* Info.plist */,
+			);
+			path = BuloneUITests;
+			sourceTree = "<group>";
+		};
+		82BA9C2B1C85E37000964980 /* Templates */ = {
+			isa = PBXGroup;
+			children = (
+				82BA9C2C1C85E37A00964980 /* Swift */,
+			);
+			name = Templates;
+			sourceTree = "<group>";
+		};
+		82BA9C2C1C85E37A00964980 /* Swift */ = {
+			isa = PBXGroup;
+			children = (
+				82BA9C321C8948FD00964980 /* apidatamanager.mustache */,
+				82BA9C331C8948FD00964980 /* header.mustache */,
+				82BA9C341C8948FD00964980 /* interactor.mustache */,
+				82BA9C351C8948FD00964980 /* localdatamanager.mustache */,
+				82BA9C361C8948FD00964980 /* item.mustache */,
+				82BA9C371C8948FD00964980 /* presenter.mustache */,
+				82BA9C381C8948FD00964980 /* protocols.mustache */,
+				82BA9C391C8948FD00964980 /* view.mustache */,
+				82BA9C3A1C8948FD00964980 /* wireframe.mustache */,
+			);
+			name = Swift;
+			sourceTree = "<group>";
+		};
+		E6A25A72EDA7729B5F8D0F97 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A76C5872EF8AC4E815342A19 /* Pods_Bulone.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		82BA9BFC1C85B31E00964980 /* Bulone */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 82BA9C221C85B31E00964980 /* Build configuration list for PBXNativeTarget "Bulone" */;
+			buildPhases = (
+				14B298D00849B3305986B49B /* 📦 Check Pods Manifest.lock */,
+				82BA9BF91C85B31E00964980 /* Sources */,
+				82BA9BFA1C85B31E00964980 /* Frameworks */,
+				82BA9BFB1C85B31E00964980 /* Resources */,
+				AEEFFA093DA1470150DCFB8C /* 📦 Embed Pods Frameworks */,
+				9F3CC8D2B19F33A86404921F /* 📦 Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Bulone;
+			productName = Bulone;
+			productReference = 82BA9BFD1C85B31E00964980 /* Bulone.app */;
+			productType = "com.apple.product-type.application";
+		};
+		82BA9C0D1C85B31E00964980 /* BuloneTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 82BA9C251C85B31E00964980 /* Build configuration list for PBXNativeTarget "BuloneTests" */;
+			buildPhases = (
+				82BA9C0A1C85B31E00964980 /* Sources */,
+				82BA9C0B1C85B31E00964980 /* Frameworks */,
+				82BA9C0C1C85B31E00964980 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				82BA9C101C85B31E00964980 /* PBXTargetDependency */,
+			);
+			name = BuloneTests;
+			productName = BuloneTests;
+			productReference = 82BA9C0E1C85B31E00964980 /* BuloneTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		82BA9C181C85B31E00964980 /* BuloneUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 82BA9C281C85B31E00964980 /* Build configuration list for PBXNativeTarget "BuloneUITests" */;
+			buildPhases = (
+				82BA9C151C85B31E00964980 /* Sources */,
+				82BA9C161C85B31E00964980 /* Frameworks */,
+				82BA9C171C85B31E00964980 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				82BA9C1B1C85B31E00964980 /* PBXTargetDependency */,
+			);
+			name = BuloneUITests;
+			productName = BuloneUITests;
+			productReference = 82BA9C191C85B31E00964980 /* BuloneUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		82BA9BF51C85B31E00964980 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Moody Allen";
+				TargetAttributes = {
+					82BA9BFC1C85B31E00964980 = {
+						CreatedOnToolsVersion = 7.3;
+					};
+					82BA9C0D1C85B31E00964980 = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = 82BA9BFC1C85B31E00964980;
+					};
+					82BA9C181C85B31E00964980 = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = 82BA9BFC1C85B31E00964980;
+					};
+				};
+			};
+			buildConfigurationList = 82BA9BF81C85B31E00964980 /* Build configuration list for PBXProject "Bulone" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 82BA9BF41C85B31E00964980;
+			productRefGroup = 82BA9BFE1C85B31E00964980 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				82BA9BFC1C85B31E00964980 /* Bulone */,
+				82BA9C0D1C85B31E00964980 /* BuloneTests */,
+				82BA9C181C85B31E00964980 /* BuloneUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		82BA9BFB1C85B31E00964980 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				82BA9C431C8948FD00964980 /* wireframe.mustache in Resources */,
+				82BA9C3C1C8948FD00964980 /* header.mustache in Resources */,
+				82BA9C3E1C8948FD00964980 /* localdatamanager.mustache in Resources */,
+				82BA9C401C8948FD00964980 /* presenter.mustache in Resources */,
+				82BA9C3B1C8948FD00964980 /* apidatamanager.mustache in Resources */,
+				82BA9C421C8948FD00964980 /* view.mustache in Resources */,
+				82BA9C051C85B31E00964980 /* Assets.xcassets in Resources */,
+				82BA9C411C8948FD00964980 /* protocols.mustache in Resources */,
+				82BA9C081C85B31E00964980 /* Main.storyboard in Resources */,
+				82BA9C3D1C8948FD00964980 /* interactor.mustache in Resources */,
+				82BA9C3F1C8948FD00964980 /* item.mustache in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		82BA9C0C1C85B31E00964980 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		82BA9C171C85B31E00964980 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		14B298D00849B3305986B49B /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9F3CC8D2B19F33A86404921F /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Bulone/Pods-Bulone-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AEEFFA093DA1470150DCFB8C /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Bulone/Pods-Bulone-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		82BA9BF91C85B31E00964980 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				82BA9C031C85B31E00964980 /* ViewController.swift in Sources */,
+				82BA9C011C85B31E00964980 /* AppDelegate.swift in Sources */,
+				82952A711D055F13005DCFB0 /* Bulone.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		82BA9C0A1C85B31E00964980 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				82BA9C131C85B31E00964980 /* BuloneTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		82BA9C151C85B31E00964980 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				82BA9C1E1C85B31E00964980 /* BuloneUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		82BA9C101C85B31E00964980 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 82BA9BFC1C85B31E00964980 /* Bulone */;
+			targetProxy = 82BA9C0F1C85B31E00964980 /* PBXContainerItemProxy */;
+		};
+		82BA9C1B1C85B31E00964980 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 82BA9BFC1C85B31E00964980 /* Bulone */;
+			targetProxy = 82BA9C1A1C85B31E00964980 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		82BA9C061C85B31E00964980 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				82BA9C071C85B31E00964980 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		82BA9C201C85B31E00964980 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		82BA9C211C85B31E00964980 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		82BA9C231C85B31E00964980 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 84AC8CB821670742386B829D /* Pods-Bulone.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Bulone/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "moody-allen.Bulone";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		82BA9C241C85B31E00964980 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 66B27BB16997797CCDA8EF3F /* Pods-Bulone.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Bulone/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "moody-allen.Bulone";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		82BA9C261C85B31E00964980 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = BuloneTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = fr.moody.BuloneTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bulone.app/Contents/MacOS/Bulone";
+			};
+			name = Debug;
+		};
+		82BA9C271C85B31E00964980 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = BuloneTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = fr.moody.BuloneTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bulone.app/Contents/MacOS/Bulone";
+			};
+			name = Release;
+		};
+		82BA9C291C85B31E00964980 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = BuloneUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = fr.moody.BuloneUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Bulone;
+			};
+			name = Debug;
+		};
+		82BA9C2A1C85B31E00964980 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = BuloneUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = fr.moody.BuloneUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Bulone;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		82BA9BF81C85B31E00964980 /* Build configuration list for PBXProject "Bulone" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				82BA9C201C85B31E00964980 /* Debug */,
+				82BA9C211C85B31E00964980 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		82BA9C221C85B31E00964980 /* Build configuration list for PBXNativeTarget "Bulone" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				82BA9C231C85B31E00964980 /* Debug */,
+				82BA9C241C85B31E00964980 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		82BA9C251C85B31E00964980 /* Build configuration list for PBXNativeTarget "BuloneTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				82BA9C261C85B31E00964980 /* Debug */,
+				82BA9C271C85B31E00964980 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		82BA9C281C85B31E00964980 /* Build configuration list for PBXNativeTarget "BuloneUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				82BA9C291C85B31E00964980 /* Debug */,
+				82BA9C2A1C85B31E00964980 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 82BA9BF51C85B31E00964980 /* Project object */;
+}
