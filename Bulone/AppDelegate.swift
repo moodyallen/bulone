@@ -14,8 +14,9 @@ import Mustache
 class AppDelegate: NSObject, NSApplicationDelegate {
 
     func applicationDidFinishLaunching(aNotification: NSNotification) {
-        let w = NSApplication.sharedApplication().windows.first!
-        addDarkTransparentEffectToWindow(w)
+        let window = NSApplication.sharedApplication().windows.first!
+        window.title = "Bulone"
+        addDarkTransparentEffectToWindow(window)
     }
     
     func addDarkTransparentEffectToWindow(window: NSWindow) {
@@ -24,7 +25,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 //        visualEffectView.material = NSVisualEffectMaterial.Dark
 //        visualEffectView.blendingMode = NSVisualEffectBlendingMode.BehindWindow
 //        visualEffectView.state = NSVisualEffectState.Active
-        
         window.styleMask = window.styleMask | NSFullSizeContentViewWindowMask
         window.titlebarAppearsTransparent = true
         

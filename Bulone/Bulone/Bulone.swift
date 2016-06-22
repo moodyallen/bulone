@@ -78,11 +78,12 @@ public class Bulone {
             
             let data =  [
                 "filename": filename,
-                "project" : model.projectName,
-                "author" : model.author,
-                "date" : date.date,
-                "year" : date.year,
-                "copyright" : model.copyright
+                "project": model.projectName,
+                "author": model.author,
+                "date": date.date,
+                "year": date.year,
+                "copyright": model.copyright,
+                "module": model.moduleName
             ]
             
             do {
