@@ -1,7 +1,7 @@
 import UIKit
 
 class {{ module }}WireFrame: {{ module }}WireFrameProtocol {
-  
+
     class func present{{ module }}Module(inWindow window: UIWindow) {
         let view = assemble()
         window.rootViewController = view
@@ -14,16 +14,15 @@ class {{ module }}WireFrame: {{ module }}WireFrameProtocol {
 
 }
 
-private extension {{ module }}WireFrame {
+internal extension {{ module }}WireFrame {
 
-    private class func assemble() -> {{ module }}View {
+    internal class func assemble() -> {{ module }}View {
 
         // Generating module components
         let view: {{ module }}ViewProtocol = {{ module }}View()
-        let presenter: protocol<{{ module }}PresenterProtocol, {{ module }}InteractorOutputProtocol> = {{ module }}Presenter()
+        let presenter: {{ module }}PresenterProtocol & {{ module }}InteractorOutputProtocol = {{ module }}Presenter()
         let interactor: {{ module }}InteractorInputProtocol = {{ module }}Interactor()
-        let APIDataManager: {{ module }}APIDataManagerInputProtocol = {{ module }}APIDataManager()
-        let localDataManager: {{ module }}LocalDataManagerInputProtocol = {{ module }}LocalDataManager()
+        let dataManager: {{ module }}DataManagerInputProtocol = {{ module }}DataManager()
         let wireFrame: {{ module }}WireFrameProtocol = {{ module }}WireFrame()
 
         // Connecting
@@ -32,8 +31,7 @@ private extension {{ module }}WireFrame {
         presenter.wireFrame = wireFrame
         presenter.interactor = interactor
         interactor.presenter = presenter
-        interactor.APIDataManager = APIDataManager
-        interactor.localDatamanager = localDataManager
+        interactor.dataManager = dataManager
 
         return view as! {{ module }}View
 

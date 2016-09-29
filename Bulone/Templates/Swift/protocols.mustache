@@ -8,7 +8,7 @@ protocol {{ module }}ViewProtocol: class {
     * Add here your methods for communication PRESENTER -> VIEW
     */
 
-    func updateView(model: {{ module }}Item)
+    func update(model: {{ module }}Item)
 
 }
 
@@ -51,8 +51,7 @@ protocol {{ module }}InteractorOutputProtocol: class {
 protocol {{ module }}InteractorInputProtocol: class {
 
     var presenter: {{ module }}InteractorOutputProtocol? { get set }
-    var APIDataManager: {{ module }}APIDataManagerInputProtocol? { get set }
-    var localDatamanager: {{ module }}LocalDataManagerInputProtocol? { get set }
+    var dataManager: {{ module }}DataManagerInputProtocol? { get set }
 
     /**
     * Add here your methods for communication PRESENTER -> INTERACTOR
@@ -61,7 +60,7 @@ protocol {{ module }}InteractorInputProtocol: class {
 
 }
 
-protocol {{ module }}APIDataManagerInputProtocol: class {
+protocol {{ module }}DataManagerInputProtocol: class {
 
     /**
     * Add here your methods for communication INTERACTOR -> APIDATAMANAGER
@@ -69,10 +68,3 @@ protocol {{ module }}APIDataManagerInputProtocol: class {
 
 }
 
-protocol {{ module }}LocalDataManagerInputProtocol: class {
-
-    /**
-    * Add here your methods for communication INTERACTOR -> LOCALDATAMANAGER
-    */
-
-}

@@ -1,6 +1,0 @@
-framework module Pods_Bulone {
-  umbrella header "Pods-Bulone-umbrella.h"
-
-  export *
-  module * { export * }
-}

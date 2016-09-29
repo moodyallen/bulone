@@ -7,37 +7,22 @@
 //
 
 import Cocoa
-import Mustache
 
 @NSApplicationMain
 
 class AppDelegate: NSObject, NSApplicationDelegate {
 
-    func applicationDidFinishLaunching(aNotification: NSNotification) {
-        let window = NSApplication.sharedApplication().windows.first!
+    func applicationDidFinishLaunching(_ aNotification: Notification) {
+        let window = NSApplication.shared().windows.first!
         window.title = "Bulone"
-        addDarkTransparentEffectToWindow(window)
+        addDarkTransparentEffect(to: window)
     }
-    
-    func addDarkTransparentEffectToWindow(window: NSWindow) {
-        
-//        let visualEffectView = NSVisualEffectView(frame: NSRect(x: 0, y: 0, width: window.frame.size.width, height: window.frame.size.height))
-//        visualEffectView.material = NSVisualEffectMaterial.Dark
-//        visualEffectView.blendingMode = NSVisualEffectBlendingMode.BehindWindow
-//        visualEffectView.state = NSVisualEffectState.Active
-        window.styleMask = window.styleMask | NSFullSizeContentViewWindowMask
-        window.titlebarAppearsTransparent = true
-        
-        window.appearance = NSAppearance(named: NSAppearanceNameVibrantDark)
-        
-//        window.contentView?.addSubview(visualEffectView)
-//        window.contentView?.addSubview(visualEffectView, positioned: NSWindowOrderingMode.Below, relativeTo: nil)
-//        
-    }
-
-    func applicationWillTerminate(aNotification: NSNotification) {
-        // Insert code here to tear down your application
-    }
-
 }
 
+fileprivate extension AppDelegate {
+    
+    func addDarkTransparentEffect(to window: NSWindow) {
+        window.titlebarAppearsTransparent = true
+        window.appearance = NSAppearance(named: NSAppearanceNameVibrantDark)
+    }
+}

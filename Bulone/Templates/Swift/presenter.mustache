@@ -17,7 +17,7 @@ extension {{ module }}Presenter: {{ module }}InteractorOutputProtocol {
     }
 
     func dataReady(model: {{ module }}Item) {
-        view?.updateView(model)
+        view?.update(model: model)
     }
 
 }

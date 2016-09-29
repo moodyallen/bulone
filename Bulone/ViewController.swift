@@ -27,7 +27,7 @@ class ViewController: NSViewController {
     @IBOutlet weak var choosePathButton: NSButton!
     @IBOutlet weak var generateButton: NSButton!
     
-    private lazy var viewModel = BuloneModuleModel()
+    fileprivate lazy var viewModel = BuloneModuleModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,14 +46,14 @@ extension ViewController {
         if !validateBeforeGenerate() { return }
         updateModel()
         
-        generateButton.title = ButtonTitle.Generating.rawValue.uppercaseString
-        generateButton.enabled = false
+        generateButton.title = ButtonTitle.Generating.rawValue.uppercased()
+        generateButton.isEnabled = false
         
         do {
-            try Bulone.generateModule(viewModel)
+            try Bulone.generate(from: viewModel)
             notifyOnSuccess()
         } catch let error as NSError {
-            notifyOnError("Error generating module " + viewModel.moduleName, message: error.localizedDescription)
+            notifyOnError("Error generating module " + viewModel.name, message: error.localizedDescription)
         }
         
     }
@@ -61,14 +61,14 @@ extension ViewController {
     func didTapOnChoosePathButton() {
         let path = selectPath()
         viewModel.path = path ?? ""
-        choosePathButton.title = path ?? ButtonTitle.ChoosePath.rawValue.uppercaseString
+        choosePathButton.title = path ?? ButtonTitle.ChoosePath.rawValue.uppercased()
     }
     
 }
 
 // MARK: Setup | Update
 
-private extension ViewController {
+fileprivate extension ViewController {
     
     func setup() {
         generateButton.target = self
@@ -81,28 +81,28 @@ private extension ViewController {
         viewModel.author = authorTextField.stringValue
         viewModel.projectName = projectNameTextField.stringValue
         viewModel.copyright = copyrightTextField.stringValue
-        viewModel.moduleName = moduleNameTextField.stringValue
+        viewModel.name = moduleNameTextField.stringValue
     }
     
     func updateView() {
         authorTextField.stringValue = viewModel.author
         projectNameTextField.stringValue = viewModel.projectName
         copyrightTextField.stringValue = viewModel.copyright
-        moduleNameTextField.stringValue = viewModel.moduleName
+        moduleNameTextField.stringValue = viewModel.name
     }
     
 }
 
 // MARK: Alert view
 
-private extension ViewController {
+fileprivate extension ViewController {
     
-    func createAlertView(title: String, infoText: String, style: NSAlertStyle) -> NSAlert {
+    func createAlertView(_ title: String, infoText: String, style: NSAlertStyle) -> NSAlert {
         
         let alertView: NSAlert = NSAlert()
         alertView.messageText = title
         alertView.informativeText = infoText
-        alertView.alertStyle = NSAlertStyle.CriticalAlertStyle
+        alertView.alertStyle = NSAlertStyle.critical
         
         return alertView
     }
@@ -110,42 +110,42 @@ private extension ViewController {
     func notifyOnSuccess() {
         
         generateButton.title = ButtonTitle.Done.rawValue
-        generateButton.enabled = true
+        generateButton.isEnabled = true
         
         let alert = createAlertView(
             "Module generated",
-            infoText: "Generated files located at\n" + viewModel.path + "/" + viewModel.moduleName,
-            style: .InformationalAlertStyle
+            infoText: "Generated files located at\n" + viewModel.path + "/" + viewModel.name,
+            style: .informational
         )
         
-        alert.addButtonWithTitle(ButtonTitle.Ok.rawValue)
-        alert.addButtonWithTitle(ButtonTitle.ShowInFinder.rawValue)
+        alert.addButton(withTitle: ButtonTitle.Ok.rawValue)
+        alert.addButton(withTitle: ButtonTitle.ShowInFinder.rawValue)
         
         let res = alert.runModal()
         
         if res == NSAlertFirstButtonReturn {
-            generateButton.title = ButtonTitle.Generate.rawValue.uppercaseString
-            generateButton.enabled = true
+            generateButton.title = ButtonTitle.Generate.rawValue.uppercased()
+            generateButton.isEnabled = true
             moduleNameTextField.stringValue = ""
         }
         
         if res == NSAlertSecondButtonReturn {
-            let url = NSURL.fileURLWithPath(viewModel.path + "/" + viewModel.moduleName)
-            NSWorkspace.sharedWorkspace().activateFileViewerSelectingURLs([url])
-            generateButton.title = ButtonTitle.Generate.rawValue.uppercaseString
-            generateButton.enabled = true
+            let url = URL(fileURLWithPath: viewModel.path + "/" + viewModel.name)
+            NSWorkspace.shared().activateFileViewerSelecting([url])
+            generateButton.title = ButtonTitle.Generate.rawValue.uppercased()
+            generateButton.isEnabled = true
             moduleNameTextField.stringValue = ""
         }
         
     }
     
-    func notifyOnError(title: String, message: String)  {
+    func notifyOnError(_ title: String, message: String)  {
         
-        generateButton.title = ButtonTitle.Generate.rawValue.uppercaseString
-        generateButton.enabled = true
+        generateButton.title = ButtonTitle.Generate.rawValue.uppercased()
+        generateButton.isEnabled = true
         
-        let alert = createAlertView(title, infoText: message, style: .CriticalAlertStyle)
-        alert.addButtonWithTitle(ButtonTitle.Ok.rawValue)
+        let alert = createAlertView(title, infoText: message, style: .critical)
+        alert.addButton(withTitle: ButtonTitle.Ok.rawValue)
         alert.runModal()
     }
     
@@ -153,7 +153,7 @@ private extension ViewController {
 
 // MARK: Utilities
 
-private extension ViewController {
+fileprivate extension ViewController {
     
     func selectPath() -> String? {
         
@@ -164,7 +164,7 @@ private extension ViewController {
         open.prompt = "Select"
         
         if open.runModal() == NSModalResponseOK {
-            return open.URLs.first?.path
+            return open.urls.first?.path
         }
         
         return nil
@@ -185,15 +185,15 @@ private extension ViewController {
     func validateBeforeGenerate() -> Bool {
         
         if isAllFieldsFilled() {
-            let alert = createAlertView("All fields are required", infoText: "Please fill all fields", style: .CriticalAlertStyle)
-            alert.addButtonWithTitle(ButtonTitle.Ok.rawValue)
+            let alert = createAlertView("All fields are required", infoText: "Please fill all fields", style: .critical)
+            alert.addButton(withTitle: ButtonTitle.Ok.rawValue)
             alert.runModal()
             return false
         }
         
         if viewModel.path == "" {
-            let alert = createAlertView("File path missing", infoText: "Please choose a path for files", style: .CriticalAlertStyle)
-            alert.addButtonWithTitle(ButtonTitle.Ok.rawValue)
+            let alert = createAlertView("File path missing", infoText: "Please choose a path for files", style: .critical)
+            alert.addButton(withTitle: ButtonTitle.Ok.rawValue)
             alert.runModal()
             return false
         }

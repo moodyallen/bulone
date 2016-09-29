@@ -17,10 +17,10 @@ class {{ module }}View: UIViewController {
 }
 
 extension {{ module }}View: {{ module }}ViewProtocol {
-    func updateView(model: {{ module }}Item) { }
+    func update(model: {{ module }}Item) { }
 }
 
-private extension {{ module }}View {
+internal extension {{ module }}View {
     func setup() { }
     func layout() { }
 }
